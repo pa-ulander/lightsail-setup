@@ -13,7 +13,7 @@ sudo apt-get install python-software-properties
 # Install PHP
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get -y update
-sudo apt-get install php7.2 php7.2-fpm
+sudo apt-get install php7.4 php7.4-fpm
 
 sudo a2enmod actions fastcgi alias proxy_fcgi
 
@@ -31,7 +31,7 @@ sudo echo '<VirtualHost *:80>
 
     <FilesMatch \.php$>
 	# apache 2.4.10+ can use proxy to unix socket
-	SetHandler "proxy:unix:/var/run/php/php7.3-fpm.sock|fcgi://localhost/"
+	SetHandler "proxy:unix:/var/run/php/php7.4-fpm.sock|fcgi://localhost/"
 
 	# or we can also use a tcp socket
         #SetHandler "proxy:fcgi://127.0.0.1:9000"
