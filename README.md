@@ -6,3 +6,5 @@ $ cd lightsail-setup && chmod +x setup.sh && ./setup.sh
 
 
 Please remember to change the mysql password
+
+https://aws.amazon.com/lightsail/
